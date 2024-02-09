@@ -63,8 +63,10 @@ public class Queue {
 	public boolean enQueue(int item) {
 
 		/*
-		 * when front is not -1 mean the array which have been dequeue before, we need to
-		 * reposition front to -1 and rear. To ensure 
+		 * when front is not -1 mean the array which have been dequeue before, 
+		 * we need to reposition front to -1 and rear which is by the element length.
+		 * To ensure space which be use efficient. But front is not -1 will execute this 
+		 * snippet, the time complexity will be O(n).
 		 */
 		if (front != -1) {
 			for (int i = front + 1; i <= rear; i++) {
